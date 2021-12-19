@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActionArea from '@mui/material/CardActionArea';
 import {useNavigate} from 'react-router-dom';
-import {Set} from '../../../redux/types/sets.types';
+import {Set} from '../../../redux/types/sets';
 import {APP_ROUTES} from '../../routes/routes';
 
 interface Props {
@@ -18,7 +18,7 @@ const SetCard = ({set}: Props) => {
     }, 300);
   };
   return (
-    <Card onClick={handleClick}>
+    <Card onClick={handleClick} sx={{ml: 2}}>
       <CardActionArea>
         <CardContent>
           <Typography align='left' variant='h5'gutterBottom >

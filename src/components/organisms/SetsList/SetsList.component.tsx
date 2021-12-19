@@ -1,5 +1,5 @@
 import React from 'react';
-import {useAppSelector} from '../../../hooks';
+import {useAppSelector} from '../../../hooks/redux';
 import {SetCard} from '../../moleculs/SetCard';
 import Box from '@mui/material/Box';
 
@@ -13,7 +13,7 @@ const SetsList = () => {
       mt: 2,
       gap: 2,
       mx: 2,
-    }}>
+    }} className="asd{asd}">
       {setsJSX}
     </Box>);
 };

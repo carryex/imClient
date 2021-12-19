@@ -2,8 +2,8 @@ import React from 'react';
 import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
-import {useAppDispatch} from '../../../hooks';
-import {addCardToDraft} from '../../../redux/slices/sets.slice';
+import {useAppDispatch} from '../../../hooks/redux';
+import {addCardToDraft} from '../../../redux/slices/set';
 
 const NewSetBottomBar = () => {
   const dispatch = useAppDispatch();

@@ -3,6 +3,8 @@ const APP_ROUTES = {
   CREATE: 'create',
   PROFILE: 'profile',
   SETS: 'sets',
+  LOGIN: 'login',
+  REGISTER: 'register',
 };
 
 export {APP_ROUTES};

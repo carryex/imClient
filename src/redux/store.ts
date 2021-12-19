@@ -1,9 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
-import sets from './slices/sets.slice';
+import sets from './slices/set';
+import auth from './slices/auth';
 
 const store = configureStore({
   reducer: {
     sets,
+    auth,
   },
 });
 

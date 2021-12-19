@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
-import {useAppSelector} from '../../../hooks';
+import {useAppSelector} from '../../../hooks/redux';
 import {Card} from '../../moleculs/Card';
 const Set = () =>{
   const params = useParams();

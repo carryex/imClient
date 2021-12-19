@@ -4,8 +4,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import {useAppDispatch, useAppSelector} from '../../../hooks';
-import {addSet} from '../../../redux/slices/sets.slice';
+import {useAppDispatch, useAppSelector} from '../../../hooks/redux';
+import {addSet} from '../../../redux/slices/set';
 
 const Decks = () => {
   const decks = useAppSelector((state) => state.sets.collection);

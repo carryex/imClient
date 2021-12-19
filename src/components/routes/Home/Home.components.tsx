@@ -7,7 +7,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 import Box from '@mui/material/Box';
 
 import {APP_ROUTES} from '..';
-import {useAppSelector} from '../../../hooks';
+import {useAppSelector} from '../../../hooks/redux';
 import {SetsPreview} from '../../organisms/SetsPreview';
 
 const Home = () => {

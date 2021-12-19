@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {v4 as uuid} from 'uuid';
-import {Card, Set} from '../types/sets.types';
+import {Card, Set} from '../types/sets';
 
 const initialCard: Card = {
   id: uuid(),
@@ -38,7 +38,6 @@ const mockSets: Set[] = [
   },
 ];
 
-// Define the initial state using that type
 const initialState: SetsState = {
   collection: mockSets,
   draft: initialSet,
@@ -77,10 +76,10 @@ export const setsSlice = createSlice({
         }
       }
     },
-    addCardToDraft: (state, action: PayloadAction<void>) => {
+    addCardToDraft: (state) => {
       state.draft.cards.push({...initialCard, id: uuid()});
     },
-    saveDraft: (state, action: PayloadAction<void>) => {
+    saveDraft: (state) => {
       if (state.draft.title.length === 0 || !state.draft.title) {
         return;
       }

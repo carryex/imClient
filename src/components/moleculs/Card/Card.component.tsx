@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card as CardType} from '../../../redux/types/sets.types';
+import {Card as CardType} from '../../../redux/types/sets';
 import CardMui from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import {Typography} from '@mui/material';

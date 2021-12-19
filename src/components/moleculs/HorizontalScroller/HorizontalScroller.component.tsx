@@ -12,7 +12,7 @@ const HorizontalScroller = ({childs, gap = 2}:Props) => {
     </Box>,
   );
   return (
-    <Box gap={gap} sx={{display: 'flex', overflowX: 'scroll'}}>
+    <Box gap={gap} sx={{display: 'flex', overflowX: 'scroll', p: '1px'}}>
       {childsJSX}
     </Box>)
   ;
