@@ -1,5 +1,5 @@
 import {createSelector} from 'reselect';
-import {AuthState} from '../slices/auth';
+import {AuthState} from '../slices/auth.slice';
 import {RootState} from '../store';
 
 const authSelector: (state: RootState) => AuthState = (

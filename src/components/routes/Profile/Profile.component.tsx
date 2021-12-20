@@ -1,7 +1,7 @@
 import {Button} from '@mui/material';
 import React from 'react';
 import {useAppDispatch} from '../../../hooks/redux';
-import {logout} from '../../../redux/thunks/auth';
+import {logout} from '../../../redux/thunks/auth.thunks';
 
 const Profile: React.FC = () => {
   const dispatch = useAppDispatch();

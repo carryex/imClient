@@ -3,7 +3,7 @@ import MuiLink from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import {Link} from 'react-router-dom';
 import {Typography} from '@mui/material';
-import {Set} from '../../../redux/types/sets';
+import {Set} from '../../../redux/types/set.types';
 import {SetCard} from '../../moleculs/SetCard';
 import {HorizontalScroller} from '../../moleculs/HorizontalScroller';
 import {APP_ROUTES} from '../../routes';

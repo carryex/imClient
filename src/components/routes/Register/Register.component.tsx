@@ -8,7 +8,7 @@ import MuiLink from '@mui/material/Link';
 import {Link, useNavigate} from 'react-router-dom';
 import {APP_ROUTES} from '..';
 import {isUserAuthenticatedSelector} from '../../../redux/selectors/auth';
-import {Provider, register} from '../../../redux/thunks/auth';
+import {Provider, register} from '../../../redux/thunks/auth.thunks';
 
 const Register = () => {
   const navigate = useNavigate();

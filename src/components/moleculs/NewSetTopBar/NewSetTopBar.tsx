@@ -3,7 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import Typography from '@mui/material/Typography';
 import {useAppDispatch} from '../../../hooks/redux';
-import {saveDraft} from '../../../redux/slices/set';
+import {saveDraft} from '../../../redux/slices/set.slice';
 import {useNavigate} from 'react-router-dom';
 import {APP_ROUTES} from '../../routes';
 import Link from '@mui/material/Link';

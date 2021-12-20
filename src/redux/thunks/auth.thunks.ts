@@ -5,7 +5,7 @@ import {
   logOut,
   registerWithEmail,
 } from '../../services/firebase/auth';
-import {AuthState} from '../slices/auth';
+import {AuthState} from '../slices/auth.slice';
 
 enum Provider {
   Google,

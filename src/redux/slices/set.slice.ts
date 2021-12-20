@@ -1,6 +1,7 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction, SerializedError} from '@reduxjs/toolkit';
 import {v4 as uuid} from 'uuid';
-import {Card, Set} from '../types/sets';
+import {createSet} from '../thunks/set.thunks';
+import {Card, Set} from '../types/set.types';
 
 const initialCard: Card = {
   id: uuid(),
@@ -16,30 +17,11 @@ const initialSet: Set = {
 interface SetsState {
   collection: Set[],
   draft: Set,
+  error?: SerializedError;
 }
 
-const mockCard: Card = {
-  id: uuid(),
-  term: 'Дом',
-  definition: 'Home',
-};
-const mockSets: Set[] = [
-  {
-    id: uuid(),
-    title: 'English',
-    description: 'Learn englist words',
-    cards: [mockCard],
-  },
-  {
-    id: uuid(),
-    title: 'Serbian',
-    description: 'Learn serbian words',
-    cards: [mockCard],
-  },
-];
-
 const initialState: SetsState = {
-  collection: mockSets,
+  collection: [],
   draft: initialSet,
 };
 
@@ -95,6 +77,15 @@ export const setsSlice = createSlice({
       state.draft = initialSet;
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(createSet.fulfilled, (state, action) => {
+      state.draft = initialSet;
+      console.log(action);
+    });
+    builder.addCase(createSet.rejected, (state, action) => {
+      state.error = action.error;
+    });
+  },
 });
 
 export const {
@@ -103,6 +94,8 @@ export const {
   addCardToDraft,
   saveDraft,
 } = setsSlice.actions;
+
+export type {SetsState};
 
 export default setsSlice.reducer;
 

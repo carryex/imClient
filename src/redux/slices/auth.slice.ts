@@ -2,7 +2,7 @@ import {
   createSlice,
   SerializedError,
 } from '@reduxjs/toolkit';
-import {login, logout, register} from '../thunks/auth';
+import {login, logout, register} from '../thunks/auth.thunks';
 
 
 interface AuthState {

@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import {useAppDispatch, useAppSelector} from '../../../hooks/redux';
-import {updateDraft} from '../../../redux/slices/set';
+import {updateDraft} from '../../../redux/slices/set.slice';
 
 
 const NewSetForm = () => {

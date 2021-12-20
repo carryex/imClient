@@ -2,7 +2,7 @@ import React from 'react';
 import {isUserAuthenticatedSelector} from '../redux/selectors/auth';
 import {useAppDispatch, useAppSelector} from './redux';
 import {authStateChanged} from '../services/firebase/auth';
-import {login, logout} from '../redux/thunks/auth';
+import {login, logout} from '../redux/thunks/auth.thunks';
 
 const Auth = () => {
   const authenticated = useAppSelector(isUserAuthenticatedSelector);

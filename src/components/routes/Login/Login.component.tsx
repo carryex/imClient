@@ -10,7 +10,7 @@ import {isUserAuthenticatedSelector} from '../../../redux/selectors/auth';
 import {Link} from 'react-router-dom';
 import {APP_ROUTES} from '..';
 import MuiLink from '@mui/material/Link';
-import {login, Provider} from '../../../redux/thunks/auth';
+import {login, Provider} from '../../../redux/thunks/auth.thunks';
 
 
 const Login: React.FC = () => {

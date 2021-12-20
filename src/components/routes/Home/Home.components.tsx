@@ -9,9 +9,10 @@ import Box from '@mui/material/Box';
 import {APP_ROUTES} from '..';
 import {useAppSelector} from '../../../hooks/redux';
 import {SetsPreview} from '../../organisms/SetsPreview';
+import {setsSelector} from '../../../redux/selectors/set.selectors';
 
 const Home = () => {
-  const sets = useAppSelector((state) => state.sets.collection);
+  const sets = useAppSelector(setsSelector);
   if (sets.length !== 0) {
     return (<SetsPreview sets={sets}/>);
   }

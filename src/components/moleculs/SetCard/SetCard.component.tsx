@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActionArea from '@mui/material/CardActionArea';
 import {useNavigate} from 'react-router-dom';
-import {Set} from '../../../redux/types/sets';
+import {Set} from '../../../redux/types/set.types';
 import {APP_ROUTES} from '../../routes/routes';
 
 interface Props {
