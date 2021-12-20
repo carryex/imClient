@@ -12,6 +12,8 @@ import {
   browserSessionPersistence,
 } from 'firebase/auth';
 
+import {userDoc} from './user';
+
 const auth = getAuth(app);
 
 const logInWithEmail = async (email: string, password:string) => {
@@ -23,14 +25,17 @@ const logInWithEmail = async (email: string, password:string) => {
 const logInWithGoogle = async () => {
   const response = await signInWithPopup(auth, new GoogleAuthProvider());
   const user = response.user;
-  const displayName = user.displayName;
-  const email = user.email;
+  const displayName = user.displayName || '';
+  const email = user.email || '';
+  await userDoc.set(user.uid, displayName, email);
   return {displayName, email};
 };
 
 const registerWithEmail = async (email: string, password: string) => {
   const response = await createUserWithEmailAndPassword(auth, email, password);
-  const displayName = response.user?.displayName;
+  const user = response.user;
+  const displayName = '';
+  await userDoc.set(user.uid, '', email);
   return {displayName, email};
 };
 
@@ -45,7 +50,7 @@ const authStateChanged = async (
 ) => {
   onAuthStateChanged(auth, async (user) => {
     if (user && !authenticated) {
-      return await refreshCallback(user.displayName, user.email);
+      return refreshCallback(user.displayName, user.email);
     }
     if (!user && !authenticated) {
       logoutCallback();

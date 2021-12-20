@@ -18,7 +18,7 @@ const Login: React.FC = () => {
   const location = useLocation();
   const isAuthenticated = useAppSelector(isUserAuthenticatedSelector);
   // @ts-ignore
-  const from = location.state.from?.pathname || '/';
+  const from = location.state?.from?.pathname || '/';
   const dispatch = useAppDispatch();
   const [email, setEmail] = React.useState<string>('');
   const [password, setPassword] = React.useState<string>('');
